@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.sobre {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px #757575;
+    width: 80%;
+    position: relative;
+    border-radius: 2%;
+    margin: 40px auto;
+    height: 90%;
+}
+
+.eu {
+    padding: 10px;
+    position: relative;
+    width: 90%;
+    height: 280px;
+    border-radius: 100%;
+}
+
+.redes {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+}
+
+.redes img {
+    top: 0px;
+    height: 90%;
+    position: relative;
+}
+
+.texto {
+    margin-top: 1%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    opacity: 0;
+    animation: fader 10s infinite;
+    font-family: 'Itim', cursive;
+    /*src: url('Itim-Regular.ttf');*/
+}
+
+
+/* cada texto tem um delay de 5 + o valor do delay anterior, meno o primeiro */
+
+.a {
+    animation-delay: 0.5s;
+}
+
+.b {
+    animation-delay: 4s;
+}
+
+.c {
+    animation-delay: 7s;
+}
+
+
+/* Animação acontece apenas entre 0 e 20%, pois são 5 elementos */
+
+@keyframes fader {
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0;
+    }
+}
+
+
+/* Deixando responsivo para os celulares Iphone 5/SE*/
+
+
+/*Para telas de  Surface Duo
+Para telas maiores de 530px de largura e 600px de altura */
+
+@media screen and (min-width: 540px) and (min-height:700px) {
+    .eu {
+        height: 50%;
+    }
+    .texto {
+        font-size: 1.5rem;
+    }
+}
+
+
+/*Para telas menores que a largura de 330px*/
+
+@media screen and (max-width: 330px) {
+    .texto {
+        font-size: 1em;
+    }
+}
+
+
+/*Para telas menos que a altura maior de 810px*/
+
+@media screen and (min-height: 810px) {
+    .texto {
+        font-size: 1.5em;
+        top: 50px;
+    }
+}
+
+@media screen and (max-height: 810px) {
+    .eu {
+        width: 60%;
+    }
+    .texto {
+        font-size: 1.5em;
+        top: 50px;
+    }
+}
+
+
+/*Para telas de IPad
+Para telas maiores de 750px de largura e 1000px de altura */
+
+@media screen and (min-width: 750px) and (min-height:1000px) {
+    .eu {
+        width: 60%;
+        height: 500px;
+    }
+    .texto {
+        font-size: 2rem;
+    }
+}
+
+
+/*Para telas de IPad Pro
+Para telas maiores de 1000px de largura e 1300px de altura */
+
+@media screen and (min-width: 1000px) {
+    .sobre {
+        height: 90%;
+    }
+    .eu {
+        width: 40%;
+        height: 50%;
+    }
+    .texto {
+        top: 0;
+        font-size: 1.4rem;
+    }
+}
+
+
+/*Para telas de Monitores
+Para telas maiores de 1400px de largura */
+
+@media screen and (min-width:1400px) {
+    .eu {
+        width: 40%;
+        height: 60%;
+    }
+    .texto {
+        top: 0px;
+        font-size: 1.5rem;
+    }
+    .sobre {
+        box-shadow: none;
+    }
+}
+
+@media screen and (min-width:2100px) {
+    .texto {
+        top: 0px;
+        font-size: 2.3rem;
+    }
+    .sobre {
+        box-shadow: none;
+    }
+}

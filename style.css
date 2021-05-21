@@ -15,11 +15,11 @@ body {
 .sobre {
     background-color: #ffffff;
     box-shadow: 0px 0px 10px #757575;
-    width: 80%;
+    width: 90%;
     position: relative;
     border-radius: 2%;
-    margin: 40px auto;
-    height: 90%;
+    margin: 10px auto;
+    height: 95%;
 }
 
 .eu {
@@ -97,12 +97,13 @@ Para telas maiores de 530px de largura e 600px de altura */
     }
 }
 
-
-/*Para telas menores que a largura de 330px*/
-
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 320px) and (max-height: 600px) {
     .texto {
-        font-size: 1em;
+        font-size: 1rem;
+    }
+    .eu {
+        width: 90%;
+        height: 50%;
     }
 }
 
@@ -116,7 +117,7 @@ Para telas maiores de 530px de largura e 600px de altura */
     }
 }
 
-@media screen and (max-height: 810px) {
+@media screen and (min-width: 800px) {
     .eu {
         width: 60%;
     }
@@ -127,7 +128,8 @@ Para telas maiores de 530px de largura e 600px de altura */
 }
 
 
-/*Para telas de IPad
+/*
+Para telas de IPad
 Para telas maiores de 750px de largura e 1000px de altura */
 
 @media screen and (min-width: 750px) and (min-height:1000px) {

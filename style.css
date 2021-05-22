@@ -12,12 +12,13 @@ body {
     position: absolute;
     border: 0px;
     border-radius: 50px;
-    box-shadow: blue 2px 0px 5px;
-    padding: 20px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 20px;
+    padding: 9px;
     top: 10px;
     background-color: rgb(255, 255, 255);
-    right: 30px;
-    z-index: 100;
+    right: 10px;
+    width: 42px;
+    height: 40px;
 }
 
 body.dark-theme {
@@ -25,25 +26,8 @@ body.dark-theme {
     --bkg-color: #121212;
 }
 
-@media (prefers-color-scheme: dark) {
-    /* defaults to dark theme */
-    body {
-        --text-color: #eee;
-        --bkg-color: #121212;
-    }
-    body.light-theme {
-        --text-color: rgb(17, 250, 36);
-        --bkg-color: #fff;
-    }
-}
-
 body {
     background: var(--bkg-color);
-}
-
-h1,
-p {
-    color: var(--text-color);
 }
 
 .container {
@@ -87,6 +71,7 @@ p {
 }
 
 .texto {
+    color: var(--text-color);
     margin-top: 1%;
     font-size: 1.2rem;
     font-weight: bold;
@@ -133,6 +118,7 @@ Para telas maiores de 530px de largura e 600px de altura */
 
 @media screen and (min-width: 540px) and (min-height:700px) {
     .eu {
+        width: 70%;
         height: 50%;
     }
     .texto {
@@ -152,7 +138,7 @@ Para telas maiores de 530px de largura e 600px de altura */
 
 @media screen and (max-width: 300px) and (min-height: 295px) {
     .texto {
-        font-size: 20px;
+        font-size: 30px;
     }
     .eu {
         width: 90%;
@@ -171,7 +157,7 @@ Para telas maiores de 530px de largura e 600px de altura */
 
 @media screen and (min-width: 800px) {
     .eu {
-        width: 60%;
+        width: 50%;
     }
     .texto {
         font-size: 1.5em;
